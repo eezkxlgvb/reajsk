@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REZA GROOTZ — Ultra Luxury Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <div class="logo">
+        <span class="logo-icon">👑</span>
+        <h1>REZA GROOTZ</h1>
+        <p class="subtitle">Ultra Luxury Panel</p>
+      </div>
+      <form id="login-form">
+        <div class="input-group">
+          <label>نام کاربری</label>
+          <input type="text" id="username" value="admin" placeholder="نام کاربری">
+        </div>
+        <div class="input-group">
+          <label>رمز پنل</label>
+          <input type="password" id="password" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-gold">ورود به پنل</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="panel-screen" class="screen hidden">
+    <header class="panel-header">
+      <div class="header-left">
+        <span class="logo-small">👑</span>
+        <h2>REZA GROOTZ</h2>
+      </div>
+      <div class="header-right">
+        <span id="user-display">admin</span>
+        <button id="logout-btn" class="btn-small">خروج</button>
+      </div>
+    </header>
+
+    <main class="panel-main">
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-icon">📡</span>
+          <span class="stat-label">کانفیگ‌های فعال</span>
+          <span id="stat-count" class="stat-value">۰</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">⚡</span>
+          <span class="stat-label">نوع‌های پشتیبانی</span>
+          <span class="stat-value">۴</span>
+        </div>
+      </div>
+
+      <div class="generator-section">
+        <h3>⚡ مولد کانفیگ</h3>
+        <div class="gen-form">
+          <div class="form-row">
+            <div class="input-group">
+              <label>نام کانفیگ</label>
+              <input type="text" id="config-name" placeholder="مثال: کانفیگ VIP">
+            </div>
+            <div class="input-group">
+              <label>نوع کانفیگ</label>
+              <select id="config-type">
+                <option value="vless">VLESS + WebSocket</option>
+                <option value="reality">REALITY</option>
+                <option value="trojan">TROJAN</option>
+                <option value="stormdns">StormDNS</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label>دامنه (اختیاری)</label>
+              <input type="text" id="config-domain" placeholder="example.com">
+            </div>
+            <div class="input-group">
+              <label>پورت (اختیاری)</label>
+              <input type="number" id="config-port" placeholder="۴۴۳" value="443">
+            </div>
+          </div>
+          <button id="generate-btn" class="btn-gold btn-full">🔥 تولید کانفیگ</button>
+        </div>
+      </div>
+
+      <div class="configs-section">
+        <h3>📋 کانفیگ‌های ذخیره شده</h3>
+        <div id="configs-list">
+          <p class="empty-msg">هنوز کانفیگی ساخته نشده. یک کانفیگ بساز!</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+                            </html>
