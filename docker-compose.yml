@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  panel:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - MONGODB_URI=mongodb://mongo:27017/reza-grootz
+      - JWT_SECRET=reza_grootz_ultra_secret_key_2026
+      - PANEL_PASSWORD=reza grootz
+    depends_on:
+      - mongo
+    restart: always
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
+volumes:
+  mongo_data:
